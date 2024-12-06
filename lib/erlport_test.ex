@@ -24,13 +24,18 @@ defmodule ErlportTest do
       # |> List.to_string()
       |> dbg()
 
-    Python.call(python, "py_functions", "greet", [ "Elixir" ])
-      # |> List.to_string()
+    Python.call(python, "py_functions", "greet", [ "Elixir 엘릭서" ])
+      |> List.to_string()
       |> dbg()
 
-    Python.call(python, "py_functions", "add", [1,2])
-      # |> List.to_string()
-      |> dbg()
+    # Python.call(python, "py_functions", "add", [1,2])
+    #   |> dbg()
+
+    # Python.call(python, "py_functions", "large_list", [])
+    #   |> Enum.map(&List.to_string/1)
+    #   |> dbg()
+    #   |> Enum.each(fn i -> IO.puts(i) end)
+
 
     Python.stop(python)
   end

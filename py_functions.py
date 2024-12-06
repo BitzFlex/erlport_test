@@ -9,8 +9,13 @@ def get_sys_path():
     return sys.path
 
 def greet(name):
-    return f"Hello , {name}!"
+    return str(f"Hello, {name.decode('utf-8')}!")
 
 def add(a, b):
     return a + b
 
+def large_list():
+    string_list = []
+    for i in range(1, 10000):
+        string_list.append(f"String-{i}")
+    return string_list
