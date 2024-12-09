@@ -16,6 +16,10 @@ def add(a, b):
 
 def large_list():
     string_list = []
-    for i in range(1, 10000):
+    for i in range(1, 100000):
         string_list.append(f"String-{i}")
     return string_list
+
+def get_dict():
+    return {"a": 1, "b": {1: 1}}
+
